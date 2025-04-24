@@ -8,13 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BlogUpdateRequest {
+public class ImageCreateRequest {
+
     @NotBlank
     private String title;
     @NotBlank
-    private String summary;
-    @NotBlank
-    private String content;
-    @NotBlank
-    private String coverImageUrl;
+    private String url;
 }

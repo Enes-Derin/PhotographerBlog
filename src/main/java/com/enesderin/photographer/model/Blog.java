@@ -19,7 +19,7 @@ public class Blog {
     private String title;
     private String summary;
     private String content;
-    private String imageUrl;
+    private String coverImageUrl;
     private LocalDateTime createdAt=LocalDateTime.now();
 
 }

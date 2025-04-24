@@ -16,5 +16,5 @@ public class BlogCreateRequest {
     @NotBlank
     private String content;
     @NotBlank
-    private String imageUrl;
+    private String coverImageUrl;
 }
