@@ -4,7 +4,6 @@ import com.enesderin.photographer.dto.request.BlogCreateRequest;
 import com.enesderin.photographer.dto.request.BlogUpdateRequest;
 import com.enesderin.photographer.dto.response.AllBlogResponse;
 import com.enesderin.photographer.dto.response.OneBlogResponse;
-import com.enesderin.photographer.model.Blog;
 import com.enesderin.photographer.service.IBlogService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;

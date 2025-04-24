@@ -4,6 +4,7 @@ import com.enesderin.photographer.dto.request.BlogCreateRequest;
 import com.enesderin.photographer.dto.request.BlogUpdateRequest;
 import com.enesderin.photographer.dto.response.AllBlogResponse;
 import com.enesderin.photographer.dto.response.OneBlogResponse;
+import com.enesderin.photographer.exception.NotFoundException;
 import com.enesderin.photographer.model.Blog;
 import com.enesderin.photographer.repository.BlogRepository;
 import lombok.AllArgsConstructor;
@@ -40,7 +41,7 @@ public class BlogServiceImpl implements IBlogService{
             BeanUtils.copyProperties(blog.get(), oneBlogResponse);
             return oneBlogResponse;
         }
-        return null;
+        throw new NotFoundException("Blog not found");
     }
 
     @Override
@@ -62,6 +63,8 @@ public class BlogServiceImpl implements IBlogService{
             Blog blog1 = optional.get();
             BeanUtils.copyProperties(blog, blog1);
             blogRepository.save(blog1);
+        }else{
+            throw new NotFoundException("Blog not found");
         }
     }
 }
